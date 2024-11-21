@@ -14,6 +14,7 @@ public class UserServiceImpl implements UserService {
     private final String url = "http://94.198.50.185:7081/api/users";
     private String sessionId;
     private String token;
+
     @Override
     public ResponseEntity<String> listUsers() {
         ResponseEntity<String> responseEntity = restTemplate.exchange(url, HttpMethod.GET, null, String.class);
